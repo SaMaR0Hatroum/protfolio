@@ -1,0 +1,122 @@
+---
+title: Why I Joined WorkOS
+date: '2022-01-22'
+categories: ['Career']
+description: 'New chapter in my career'
+published: true
+showTOC: false
+cover:
+  src: '/images/writing/why-i-joined-workos/cover.png'
+  alt: 'Why I Joined WorkOS'
+---
+
+I'm excited to share why I joined WorkOS as a Developer Advocate. I wanted to share my thought process and why I decided to start this new adventure.
+
+I was at Prisma for a little over a year. I had a wonderful time working with brilliant people on a remarkable open-source project.
+
+I'm super proud of all the things I've accomplished: I filmed 20+ videos, written multiple blog posts, did livestreams, helped with release communication, maintained code examples, met new people, and spoke at several meetups/conferences.
+
+The community was growing, and everything was going well, so why the switch?
+
+The main reasons were:
+
+- I was seeking a new challenge in a different space
+- The company's philosophy and its approach to building tools for developers was appealing
+- Opportunity to work on a smaller DevRel team and wanting to grow it
+
+## A new challenge, in a different space
+
+I'm obsessed with developer tools. It's by far one of the most fun and rewarding spaces to be a part of.
+
+Building for developers is a unique challenge. They're skeptical by default, understand very well that no tool is perfect, and that everything has trade-offs.
+
+In my previous role, I was at a company focused on making database access easier and on defining workflows that increase developer productivity. It was fun. However, I realized there were so many areas in developer tools to be explored:
+
+- Platforms for frontend developers
+- Serverless/cloud platforms
+- Backend-as-a-service
+- GraphQL tools
+- Search
+- Collaborative tools
+- Databases
+- Analytics
+- Monitoring
+- DevOps
+- Testing
+- Infrastructure
+- And so much more
+
+So if the right opportunity in this space presented itself, I decided that I would go for it. That's when I came across WorkOS.
+
+### What is WorkOS
+
+Before sharing what WorkOS is, here's a little bit of context on the problem that it solves.
+
+Over the past few years, a lot of SaaS providers became successful by adopting the following framework:
+
+1. Build a tool focused on solving a problem very well for a single user.
+2. Allow multiple users to collaborate. For example, role-based access control (RBAC) or live editing.
+3. Start selling to enterprises where each one can have hundreds or even thousands of users.
+4. Profit 💰
+
+A few great examples that come to mind are Figma, Notion, and Vercel.
+
+There's a reason that this framework works very well. Since individual users and enterprises have their own pros and cons to being customers, having both of them helps in building a healthy and sustainable business.
+
+Individual users are always willing to try new products when they hear about them. Whether that's through friends, coworkers, or by seeing them online, this means that word-of-mouth and marketing campaigns can be super effective in raising awareness and driving growth.
+
+On the other hand, individual users are usually price-sensitive and churn quickly. So if a business solely relies on them, it will experience volatility in revenue, especially if it's in a competitive area where users have a lot of alternatives.
+
+That's why SaaS providers start building for teams. They can charge per team member and likely end up with lower churn. That's because switching tools is more challenging when many people are involved. Of course, adding support for teams costs time and resources. However, the investment pays off in the long run.
+
+Now you might think that an enterprise is just a bigger-than-usual team, and while that's true, enterprises usually require a set of extra features before considering using a SaaS:
+
+- Single Sign-On integration: an enterprise will set up its own identity provider (IdP), which provides all employees with a single set of credentials across many apps. There are hundreds of identity providers out there, including Okta, Azure, Google, and more. Each enterprise will require a SaaS provider to integrate with their choice of IdP.
+- Directory integration: an enterprise will have a central service set up to define user groups, policies, and manage access to resources. There are different Directory providers such as Workday, BambooHR, Google, and more. An enterprise might require a SaaS provider to sync user accounts with their directory. That means that whenever a new employee is added or removed from a Directory, an account should be automatically created or removed from the SaaS provider's application.
+- Audit trails: enterprises with many employees want SaaS providers to give them the ability to monitor actions done across the app. For example, when a resource gets requested, created, updated, or deleted. The IT admins should see who did what and when.
+- Security compliance
+- Privacy compliance
+- And much more
+
+While these features may seem boring to build and have zero impact on the actual user experience, SaaS providers miss out on a ton of revenue by not having them.
+
+So one of two things end up happening:
+
+1. Companies decide not to go the enterprise route because they can't allocate enough engineering resources to build these features.
+2. Companies divert engineering resources to building and maintaining these non-core features, often delaying new product releases due to resource constraints.
+
+That's where WorkOS comes in.
+
+WorkOS is an API platform that helps developers quickly ship common enterprise features.
+
+Think of it like Stripe but for adding enterprise features. No one wants to build their payment processing system, the same way no one wants to build these enterprise requirements.
+
+You also get a Stripe-like experience:
+
+- Each enterprise feature has its own API, and developers can integrate these APIs within hours.
+- The product has a pay-as-you-grow pricing model where you only pay for what you use. You can learn more by going through the [pricing page](https://workos.com/pricing).
+- Stripe started with Developer APIs and then focused on building a great end-user experience through services like [Stripe billing portal](https://stripe.com/docs/billing/subscriptions/integrating-customer-portal) and [Stripe payment links](https://stripe.com/payments/payment-links). WorkOS also focuses on the end-user experience. In this case, it's the enterprise customer. Instead of a dozen back-and-forth emails for setting up an integration, customers can go through a self-serve setup using the [Admin Portal](https://workos.com/docs/admin-portal/guide).
+
+At the time of writing this article, WorkOS powers 100+ apps, allowing them to unlock more revenue and save time. That's wild considering the fact that the product officially launched near the beginning of 2020.
+
+If you're interested in learning more about how companies are using WorkOS, feel free to check out some of the case studies:
+
+- [How Vercel leverages WorkOS to land enterprise customers like GitHub](https://workos.com/blog/vercel-case-study)
+- [How Patch unblocked $1 million in enterprise GMV with WorkOS SSO](https://workos.com/blog/patch-case-study)
+- [How Hopin Saved Two Months of Engineering Time with WorkOS](https://workos.com/blog/case-study-hopin)
+
+## The company and its culture
+
+WorkOS is still small. At the time of writing this article, we're 27 people working fully remotely.
+
+![WorkOS all-hands meeting zoom](/images/writing/why-i-joined-workos/workos-all-hands.png)
+
+When it comes to the DevRel team, it's just [Zeno](https://twitter.com/zenorocha) and me at the moment. And we have some big plans to raise awareness about WorkOS and empower the developer community.
+
+That honestly excites me. I feel like I can think outside the box and that I'll be able to see my impact directly. There's something unique about building something from scratch and seeing it slowly grow in front of you.
+
+## Final thoughts
+
+If you're a builder and you're thinking about becoming enterprise-ready, feel free to reach out to me by [email](mailto:mahmoud@workos.com) or on [Twitter](https://twitter.com/thisismahmoud_).
+
+We're also planning on growing our team even more during this year. So if you're looking for a new role at a fast-growing, fully-remote startup, feel free to reach out as well. I'd love to get to know you 😄

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  height: 100%;
+  scroll-margin-top: 2rem;
+  @apply bg-fuchsia-800 dark:bg-fuchsia-800;
+}
+
+body {
+  min-height: 100%;
+}
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+    scroll-margin-top: 2rem;
+  }
+}
+
+.info {
+  @apply border-l-2 border-l-blue-300 dark:border-l-blue-200 bg-blue-100 dark:bg-blue-800;
+}
+.warning {
+  @apply border-l-2 border-l-orange-350 dark:border-l-orange-200 bg-orange-100 dark:bg-orange-600;
+}
+
+.danger {
+  @apply border-l-2 border-l-red-300 dark:border-l-red-200 bg-red-100 dark:bg-red-800;
+}

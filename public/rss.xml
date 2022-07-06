@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Articles by Mahmoud Abdelwahab</title>
+        <link>https://mahmoudabdelwahab.com</link>
+        <description>Thinking out loud and sharing the things I learn about Software Engineering, Developer Relations, Design and more</description>
+        <lastBuildDate>Sat, 02 Jul 2022 20:17:35 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <copyright>Mahmoud Abdelwahab</copyright>
+        <item>
+            <title><![CDATA[Why I Joined WorkOS]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/why-i-joined-workos</link>
+            <guid>https://mahmoudabdelwahab.com/writing/why-i-joined-workos</guid>
+            <pubDate>Sat, 22 Jan 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[New chapter in my career]]></description>
+            <content:encoded><![CDATA[<p>I'm excited to share why I joined WorkOS as a Developer Advocate. I wanted to share my thought process and why I decided to start this new adventure.</p>
+<p>I was at Prisma for a little over a year. I had a wonderful time working with brilliant people on a remarkable open-source project.</p>
+<p>I'm super proud of all the things I've accomplished: I filmed 20+ videos, written multiple blog posts, did livestreams, helped with release communication, maintained code examples, met new people, and spoke at several meetups/conferences.</p>
+<p>The community was growing, and everything was going well, so why the switch?</p>
+<p>The main reasons were:</p>
+<ul>
+<li>I was seeking a new challenge in a different space</li>
+<li>The company's philosophy and its approach to building tools for developers was appealing</li>
+<li>Opportunity to work on a smaller DevRel team and wanting to grow it</li>
+</ul>
+<h2>A new challenge, in a different space</h2>
+<p>I'm obsessed with developer tools. It's by far one of the most fun and rewarding spaces to be a part of.</p>
+<p>Building for developers is a unique challenge. They're skeptical by default, understand very well that no tool is perfect, and that everything has trade-offs.</p>
+<p>In my previous role, I was at a company focused on making database access easier and on defining workflows that increase developer productivity. It was fun. However, I realized there were so many areas in developer tools to be explored:</p>
+<ul>
+<li>Platforms for frontend developers</li>
+<li>Serverless/cloud platforms</li>
+<li>Backend-as-a-service</li>
+<li>GraphQL tools</li>
+<li>Search</li>
+<li>Collaborative tools</li>
+<li>Databases</li>
+<li>Analytics</li>
+<li>Monitoring</li>
+<li>DevOps</li>
+<li>Testing</li>
+<li>Infrastructure</li>
+<li>And so much more</li>
+</ul>
+<p>So if the right opportunity in this space presented itself, I decided that I would go for it. That's when I came across WorkOS.</p>
+<h3>What is WorkOS</h3>
+<p>Before sharing what WorkOS is, here's a little bit of context on the problem that it solves.</p>
+<p>Over the past few years, a lot of SaaS providers became successful by adopting the following framework:</p>
+<ol>
+<li>Build a tool focused on solving a problem very well for a single user.</li>
+<li>Allow multiple users to collaborate. For example, role-based access control (RBAC) or live editing.</li>
+<li>Start selling to enterprises where each one can have hundreds or even thousands of users.</li>
+<li>Profit 💰</li>
+</ol>
+<p>A few great examples that come to mind are Figma, Notion, and Vercel.</p>
+<p>There's a reason that this framework works very well. Since individual users and enterprises have their own pros and cons to being customers, having both of them helps in building a healthy and sustainable business.</p>
+<p>Individual users are always willing to try new products when they hear about them. Whether that's through friends, coworkers, or by seeing them online, this means that word-of-mouth and marketing campaigns can be super effective in raising awareness and driving growth.</p>
+<p>On the other hand, individual users are usually price-sensitive and churn quickly. So if a business solely relies on them, it will experience volatility in revenue, especially if it's in a competitive area where users have a lot of alternatives.</p>
+<p>That's why SaaS providers start building for teams. They can charge per team member and likely end up with lower churn. That's because switching tools is more challenging when many people are involved. Of course, adding support for teams costs time and resources. However, the investment pays off in the long run.</p>
+<p>Now you might think that an enterprise is just a bigger-than-usual team, and while that's true, enterprises usually require a set of extra features before considering using a SaaS:</p>
+<ul>
+<li>Single Sign-On integration: an enterprise will set up its own identity provider (IdP), which provides all employees with a single set of credentials across many apps. There are hundreds of identity providers out there, including Okta, Azure, Google, and more. Each enterprise will require a SaaS provider to integrate with their choice of IdP.</li>
+<li>Directory integration: an enterprise will have a central service set up to define user groups, policies, and manage access to resources. There are different Directory providers such as Workday, BambooHR, Google, and more. An enterprise might require a SaaS provider to sync user accounts with their directory. That means that whenever a new employee is added or removed from a Directory, an account should be automatically created or removed from the SaaS provider's application.</li>
+<li>Audit trails: enterprises with many employees want SaaS providers to give them the ability to monitor actions done across the app. For example, when a resource gets requested, created, updated, or deleted. The IT admins should see who did what and when.</li>
+<li>Security compliance</li>
+<li>Privacy compliance</li>
+<li>And much more</li>
+</ul>
+<p>While these features may seem boring to build and have zero impact on the actual user experience, SaaS providers miss out on a ton of revenue by not having them.</p>
+<p>So one of two things end up happening:</p>
+<ol>
+<li>Companies decide not to go the enterprise route because they can't allocate enough engineering resources to build these features.</li>
+<li>Companies divert engineering resources to building and maintaining these non-core features, often delaying new product releases due to resource constraints.</li>
+</ol>
+<p>That's where WorkOS comes in.</p>
+<p>WorkOS is an API platform that helps developers quickly ship common enterprise features.</p>
+<p>Think of it like Stripe but for adding enterprise features. No one wants to build their payment processing system, the same way no one wants to build these enterprise requirements.</p>
+<p>You also get a Stripe-like experience:</p>
+<ul>
+<li>Each enterprise feature has its own API, and developers can integrate these APIs within hours.</li>
+<li>The product has a pay-as-you-grow pricing model where you only pay for what you use. You can learn more by going through the <a href="https://workos.com/pricing">pricing page</a>.</li>
+<li>Stripe started with Developer APIs and then focused on building a great end-user experience through services like <a href="https://stripe.com/docs/billing/subscriptions/integrating-customer-portal">Stripe billing portal</a> and <a href="https://stripe.com/payments/payment-links">Stripe payment links</a>. WorkOS also focuses on the end-user experience. In this case, it's the enterprise customer. Instead of a dozen back-and-forth emails for setting up an integration, customers can go through a self-serve setup using the <a href="https://workos.com/docs/admin-portal/guide">Admin Portal</a>.</li>
+</ul>
+<p>At the time of writing this article, WorkOS powers 100+ apps, allowing them to unlock more revenue and save time. That's wild considering the fact that the product officially launched near the beginning of 2020.</p>
+<p>If you're interested in learning more about how companies are using WorkOS, feel free to check out some of the case studies:</p>
+<ul>
+<li><a href="https://workos.com/blog/vercel-case-study">How Vercel leverages WorkOS to land enterprise customers like GitHub</a></li>
+<li><a href="https://workos.com/blog/patch-case-study">How Patch unblocked $1 million in enterprise GMV with WorkOS SSO</a></li>
+<li><a href="https://workos.com/blog/case-study-hopin">How Hopin Saved Two Months of Engineering Time with WorkOS</a></li>
+</ul>
+<h2>The company and its culture</h2>
+<p>WorkOS is still small. At the time of writing this article, we're 27 people working fully remotely.</p>
+<p><img src="/images/writing/why-i-joined-workos/workos-all-hands.png" alt="WorkOS all-hands meeting zoom"></p>
+<p>When it comes to the DevRel team, it's just <a href="https://twitter.com/zenorocha">Zeno</a> and me at the moment. And we have some big plans to raise awareness about WorkOS and empower the developer community.</p>
+<p>That honestly excites me. I feel like I can think outside the box and that I'll be able to see my impact directly. There's something unique about building something from scratch and seeing it slowly grow in front of you.</p>
+<h2>Final thoughts</h2>
+<p>If you're a builder and you're thinking about becoming enterprise-ready, feel free to reach out to me by <a href="mailto:mahmoud@workos.com">email</a> or on <a href="https://twitter.com/thisismahmoud_">Twitter</a>.</p>
+<p>We're also planning on growing our team even more during this year. So if you're looking for a new role at a fast-growing, fully-remote startup, feel free to reach out as well. I'd love to get to know you 😄</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+        <item>
+            <title><![CDATA[Why I changed the way I think about progress]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/why-i-changed-the-way-i-think-about-progress</link>
+            <guid>https://mahmoudabdelwahab.com/writing/why-i-changed-the-way-i-think-about-progress</guid>
+            <pubDate>Sat, 05 Jun 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Reflections on why the system I used to track my progress was flawed, and how I changed the way I think about progress]]></description>
+            <content:encoded><![CDATA[<h2>The system I used to track my progress and why it's flawed</h2>
+<p>It always starts with a goal and a specific time period.</p>
+<p>Maybe it's going on a diet for 90 days, writing a writing post every week, or reading 20 pages every day.</p>
+<p>So to track my progress, I use a calendar. If I complete the desired task on a given day, I will mark that day as complete. Otherwise, I leave it blank.</p>
+<p>Writing that big X at the end of the day feels fantastic, like receiving a hard-earned medal. On the other hand, when I miss a day, I feel like crap. But I would just shrug it off and try the next day again. I consider it part of the process.</p>
+<p>The biggest flaw when thinking about progress this way is that it's either a hit or a miss.</p>
+<p>Say I read 15 pages instead of 20 on a given day, does this count as a success or a fail? If I count it as a fail, then this discards all the work I put in, and if it's the other way around, I would feel like I'm cheating.</p>
+<p>This system made me develop an "all-or-nothing" mentality when it comes to growth. Either I'm doing a perfect job, or I'm not.</p>
+<p>When in reality, every step towards a goal counts. It doesn't have to be a perfect step. It just has to be in the right direction.</p>
+<h2>A better system</h2>
+<p>A better system should help me track how close I am to achieving a target I set, so instead of 0% <strong>or</strong> 100%, I should be able to pick any value between these two numbers.</p>
+<p>I'm thinking like GitHub's contribution graph, where the more you contribute, the darker the color:</p>
+<p><img src="/images/writing/why-i-changed-the-way-i-think-about-progress/system.png" alt="GitHub contribution Graph"></p>
+<p>I don't know if such a to-do app/habit tracker exists or not (if it does, let me know), so I'm building one as a fun side-project.</p>
+<p>I'm currently learning <a href="https://aws.amazon.com/cdk/">AWS CDK</a>, so that's what I'll use to build it along with <a href="https://nextjs.org/">Next.js</a>, <a href="https://www.typescriptlang.org/">TypeScript</a>, <a href="https://tailwindcss.com">TailwindCSS</a>, and <a href="https://www.framer.com/motion">framer-motion</a>.</p>
+<h2>Final thoughts</h2>
+<p>If you made it this far, thank you so much for reading! If you have any questions or want to chat about anything, please DM me on Twitter.
+If you want to get notified about future articles, make sure you subscribe to my newsletter below.</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+        <item>
+            <title><![CDATA[Six Months as a Developer Advocate]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/6-months-as-a-developer-advocate</link>
+            <guid>https://mahmoudabdelwahab.com/writing/6-months-as-a-developer-advocate</guid>
+            <pubDate>Sun, 23 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Reflections about my journey as a developer advocate for the last 6 months]]></description>
+            <content:encoded><![CDATA[<p></p>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="#my-background-and-how-i-got-the-role">My background and how I got the role</a></li>
+<li><a href="#working-remotely">Working remotely</a></li>
+<li><a href="#working-with-prisma-the-product">Working with Prisma, the product</a></li>
+<li><a href="#working-with-prisma-the-company">Working with Prisma, the company</a></li>
+<li><a href="#challenges-i-faced">Challenges I faced</a></li>
+<li><a href="#accomplishments-and-achievements">Accomplishments and achievements</a></li>
+<li><a href="#the-road-ahead">The road ahead</a>
+<ul>
+<li><a href="#building-community">Building community</a></li>
+<li><a href="#growing-as-a-content-creator">Growing as a content creator</a></li>
+<li><a href="#growing-as-a-developer">Growing as a developer</a></li>
+</ul>
+</li>
+<li><a href="#final-thoughts">Final thoughts</a></li>
+</ul>
+<h2>My background and how I got the role</h2>
+<p>I'm currently a 4th-year computer science student in a 5-year program.</p>
+<p>I got into Frontend Development around 3 years ago, and I fell in love with it. I started building my own projects and learned a lot about the field. I then managed to land an internship at a cool startup and some freelance contracts.</p>
+<p>One important lesson I learned is that marketing yourself and being known is just as important as your coding skills. It doesn't matter how good you are if people don't know about you. So I decided to focus on creating content and being active in the Frontend community to help advance my career in the future.</p>
+<p>Fortunately, I had a secret weapon that I knew would serve me well on this journey: I knew how to create videos</p>
+<p>Filmmaking and storytelling were one of my hobbies during my senior year in high school. I learned about writing, cameras, lighting, angles, and various editing tricks. At some point, I considered pursuing a career as a filmmaker, but seeing how hard it is to get noticed and to make a living, I changed my mind.</p>
+<p>I also started a YouTube channel and failed (multiple times) because I didn't have a content strategy or a target audience in mind. However, I got good at talking to a camera.</p>
+<p>I never knew that this skill would serve me in the future, but looking back, it's probably one of the best things I have done.</p>
+<p>So in 2020, I spoke at my first ever remote conference, ByteConf React, where I shared the <a href="https://youtu.be/N9wK9AlZwdg">mistakes I made when learning how to code</a>. I didn't follow the traditional style where you have slides and made iit more of a YouTube-style video. I got positive feedback for it, which was encouraging.</p>
+<p>Then a couple of months later, I managed to land two significant opportunities:</p>
+<ul>
+<li>I became an instructor at <a href="https://egghead.io/q/resources-by-mahmoud-abdelwahab">Egghead</a></li>
+<li>Joining Auth0's <a href="https://auth0.com/ambassador-program">ambassador program</a></li>
+</ul>
+<p>I first joined Egghead as a learner advocate, where I was responsible for taking notes for courses and giving feedback on workshops. I was basically getting paid to watch courses and learn. It was awesome.</p>
+<p>Then after a while, they reached out to me about becoming an instructor. I <em>of course</em> immediately accepted. They then sent me high-quality audio recording equipment, I recorded a couple of lessons and I'm planning on recording more.</p>
+<p><img src="/images/writing/6-months-as-a-developer-advocate/join-egghead.png" alt="Joining Egghead announcement"></p>
+<p>On the other hand, I learned that Auth0 has an ambassador program. This is a program where you collaborate with Auth0's DevRel team on creating content related to security, authentication, and authorization. In exchange, you get early access to features, and you get some cool swag. I met some fantastic people through this program and gave a talk on <a href="https://egghead.io/talks/egghead-authenticating-react-apps-using-auth0">how to add Auth0 to a React app</a> at Egghead.</p>
+<p>Creating content never felt like work to me. I enjoyed the process. That's when I realized that I wanted to become a developer advocate after I graduate and create content full-time.</p>
+<hr>
+<p>One day, while I was scrolling through Twitter, I came across a tweet from a company called <a href="https://prisma.io">Prisma</a>. It's a backend tool that handles the database layer. They were looking for a part-time, working-student Developer Advocate.</p>
+<p><img src="/images/writing/6-months-as-a-developer-advocate/prisma-job-listing.png" alt="Job position tweet"></p>
+<p>As a frontend developer, I've always reached for backend-as-a-service tools like <a href="https://aws.amazon.com/amplify/">AWS Amplify</a> or <a href="https://firebase.google.com/">Firebase</a>. I didn't consider building my own backend from scratch. I simply wasn't interested in spending time on this part of the stack. I would rather instead focus on the UI layer and the user's experience.</p>
+<p>So I wasn't a database expert, I worked with Node.js and MongoDB before, but I didn't have "real-world experience." I also had some basic SQL knowledge from college. This made me feel hesitant about applying, and imposter syndrome was at an all-time high.</p>
+<p>However, I had a portfolio of content that demonstrated my ability to communicate and teach, which was the main requirement for the job. This gave me the confidence to apply.</p>
+<p>A couple of days later, I interviewed with the head of People Operations (HR). It was a casual chat about my experience. I like to refer to this stage as "the vibe check," where they make sure I can communicate clearly and that I'm not a weirdo or anything.</p>
+<p>Next, there was an interview with the Head of the DevRel team along with the Developer Sucess Lead. We chatted about my experience, and it was a bit more technical. There was no coding interview or whiteboarding.</p>
+<p>Finally, there was a take-home assignment. I would need to write an article on end-to-end type-safety. This was a topic that I haven't explored before, so it was exciting. There were no specific requirements about who the target audience is or the length of the article. It was up to me to decide. If you're interested in reading the article, you can check it out <a href="https://mahmoudabdelwahab.com/writing/intro-to-end-to-end-type-safety">on the writing</a>.</p>
+<p>Fast-forward about ~1.5 weeks, I got an offer which I accepted. It took me a while to process what happened because it felt surreal. I got my dream job as a developer advocate while still being a student. But not only that, I was getting paid to do it and this role gave me the motivation to explore a new area of Software Engineering.</p>
+<p>If you're wondering how I managed to do all of this while being a student, I'll let you in on a little secret: I'm a shitty student. I'm talking C's and D's. So don't feel bad because you haven't figured out what you want to do in the future. I just decided what my priorities and goals are early on. Which will most likely evolve and change with time anyway.</p>
+<h2>Working remotely</h2>
+<p>Usually, the role of a Developer Advocate involves a lot of traveling and speaking engagements, where you go to meetups and conferences. However, with the pandemic, things have changed. Everything is now online.</p>
+<p>Working from home has been a positive experience for me, once I followed the following rules:</p>
+<ul>
+<li>Work in a quiet environment with minimal distractions</li>
+<li>Take frequent breaks and go on walks</li>
+</ul>
+<p>Also investing in a sit/stand desk and a decent chair helped a lot when working for long periods of time. I'm also lucky that I don't share my room with one of my brothers anymore and live in a quiet area.</p>
+<h2>Working with Prisma, the product</h2>
+<p>If you ask two Developer Advocates about what a day in their life looks like, you'll receive two different answers. The main reason is that every product and team is different.</p>
+<p>Prisma is a very well-crafted product, where the engineers took the time to design clear workflows and friendly APIs. Also, the documentation is very mature and covers a lot of information due to having some incredible technical writers.</p>
+<p>Prisma also has a fantastic community where developers give back by creating helpful resources like articles and videos. However, for me, the most impressive thing is seeing developers build tools that make other Prisma developers more productive. For example:</p>
+<ul>
+<li><a href="https://prisma-appsync.vercel.app/">Prisma-Appsync</a> - generates a fully working AWS AppSync ⚡ GraphQL CRUD API. 🚀 by <a href="https://github.com/maoosi">Sylvain</a></li>
+<li><a href="https://paljs.com/">Pal.js</a> is a set of tools to help you bootstrap your next NodeJS, Prisma, GraphQL, React project. by <a href="https://github.com/AhmedElywa">Ahmed Elywa</a></li>
+</ul>
+<p>So overall, the experience has been amazing.</p>
+<h2>Working with Prisma, the company</h2>
+<p>Working at Prisma has been an absolute delight. The people are friendly, have tons of experience, and my team is very understanding about me being a student. They also provide helpful feedback on the things I'm working on.</p>
+<p>One thing I love is how everyone is aware of what the different teams are working on and often offer helpful suggestions. So engineers, PMs, Designers can start conversations, even if it's not directly correlated to their work.</p>
+<p>Another interesting thing is how the team is distributed across multiple countries. This made me talk to people with different backgrounds and cultures, which was eye-opening.</p>
+<p>I'm also incredibly fortunate that I'm part of a big Developer Relations team, which is a lot of fun and is super empowering.</p>
+<p>Finally, the biggest and most important thing for me is that I'm allowed to express my ideas and experiment. If I didn't have that, my performance would suffer.
+The reason I can create high-quality content isn't because I know how to write, talk to a camera or shoot videos. It's because I'm genuinely excited.</p>
+<p>In conclusion: I don't have anything to complain about. Highly recommend working there. Check out <a href="https://prisma.io/jobs">prisma.io/jobs</a> and see if there's a role that excites you and come work with me.</p>
+<h2>Challenges I faced</h2>
+<p>The biggest challenge I faced is communication. It is <em>easy</em> to be misunderstood when communicating over Slack, which is why it's vital to <em>overcommunicate</em>. I'm still working on this one, but with time, I see myself overcoming it.</p>
+<p>Another area where I need improvement is estimates. They're painfully hard 😆.</p>
+<p><img src="/images/writing/6-months-as-a-developer-advocate/estimates-meme.png" alt="Meme where genie says there are three rules, no falling in love, no wishing for death and no bringing back dead people. I wish for knowinghow to estimate a task and genie says there are 4 rules"></p>
+<h2>Accomplishments and achievements</h2>
+<p>In the past 6 months, I:</p>
+<ul>
+<li>Published an article on Dev.to, <a href="https://dev.to/prisma/a-letter-you-can-send-to-your-manager-to-adopt-prisma-at-work-4k94">to help teams working with other ORMs adopt Prisma at work</a>. 💌</li>
+<li>Published an article about <a href="https://www.prisma.io/writing/database-access-in-react-server-components-r2xgk9aztgdf">React Server Components</a> on the Prisma writing. ⚛</li>
+<li>Went on a <a href="https://www.youtube.com/watch?v=5UZBhWAlyTo">Livestream with Colby Fayock</a> where I built a Next.js X Prisma demo.</li>
+<li>Created the <a href="https://www.youtube.com/watch?v=EEDGwLB55bI">What is Prisma</a> video because <a href="https://www.prisma.io/writing/prisma-the-complete-orm-inw24qjeawmb">Prisma is now Production-ready</a> ✨</li>
+<li>Created a <a href="https://www.youtube.com/watch?v=VRzuTofSooo">video anouncement</a> for Prisma's Data platform, an exciting product that helps teams collaborate when working with databases. Go check it out 👀 🎥</li>
+<li>Went on my first mini-podcast (It's 9-mins) with <a href="https://twitter.com/rosiesherry">Rosie Sherry</a> where we talked about <a href="https://racket.com/rosiesherry/rRYf7">how developer communities improve Developer Experience</a>. 🎙</li>
+</ul>
+<p>There was also some cool stuff like attending live streams and joining Twitter spaces.</p>
+<p>In the upcoming few weeks, I'll publish a course where I'll teach how to build a fullstack app using Next.js, GraphQL, TypeScript and Prisma. It's an app where users browse through a list of curated links and can bookmark their favorite ones. It's going to be huge and hopefully it'll help devs who are interested in working with this stack.</p>
+<h2>The road ahead</h2>
+<p>There are some areas I want to get better at this year:</p>
+<h3>Building community</h3>
+<p>One area that I would like to focus on is community building. I want to be more involved in the Developer Community, get to know people who use Prisma, understand their use-cases, and help them be successful. I tried it for a bit and the feeling of someone saying, "it works now! Thanks," makes me want to do a backflip.</p>
+<h3>Growing as a content creator</h3>
+<p>I want to grow my own YouTube Channel, with the focus on making other developers successful. I want to share important lessons I learn and help them level up in their careers. I also want to write more on this writing and share the things I learn.</p>
+<h3>Growing as a developer</h3>
+<p>There are a lot of areas where I would like to deepen my knowledge:</p>
+<ul>
+<li>TypeScript</li>
+<li>Testing</li>
+<li>CI/CD</li>
+<li>AWS</li>
+</ul>
+<p>I also want to work on side-projects and experiment with different tools.</p>
+<h2>Final thoughts</h2>
+<p>If you made it this far, thank you so much for reading! If you have any questions or want to chat about anything, please DM me on Twitter.
+If you want to get notified about future articles, make sure you subscribe to my newsletter below.</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+        <item>
+            <title><![CDATA[Introduction to End-to-end Type Safety]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/intro-to-end-to-end-type-safety</link>
+            <guid>https://mahmoudabdelwahab.com/writing/intro-to-end-to-end-type-safety</guid>
+            <pubDate>Thu, 12 Nov 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introduction to End-to-end Type Safety and the benefits it offers]]></description>
+            <content:encoded><![CDATA[<p>In this article, you're going to learn what end-to-end type-safety means and why it's beneficial.</p>
+<p>The only prerequisites needed are:</p>
+<ol>
+<li>Have some basic JavaScript knowledge.</li>
+<li>Understand how full-stack Web Apps work.</li>
+</ol>
+<p><code>test</code></p>
+<h2>Type-Safe JavaScript</h2>
+<p>You're working inside a JavaScript codebase, and you find the following code block:</p>
+<pre><code class="language-js">const constructFullName = (firstName, lastName) => {
+  return `${firstName} ${lastName}`;
+};
+
+constructFullName('Mahmoud', 'Abdelwahab'); // "Mahmoud Abdelwahab"
+</code></pre>
+<p>This is a function that takes two parameters, a first name, last name, and returns the full name as a string. Seems pretty harmless right? Well, what happens when you call this function and pass it only one argument? The other one will be undefined.</p>
+<pre><code class="language-js">const constructFullName = (firstName, lastName) => `${firstName} ${lastName}`;
+
+constructFullName('Mahmoud'); // "Mahmoud undefined"
+</code></pre>
+<p>A quick fix is to set a default value for the parameters to avoid this behavior, this way if we don't pass any parameters we won't get undefined.</p>
+<pre><code class="language-js">const constructFullName = (firstName = '', lastName = '') =>
+  `${firstName} ${lastName}`;
+
+constructFullName('Mahmoud'); // "Mahmoud"
+</code></pre>
+<p>But what if we want all parameters to be required, to construct a full name, we need <em>both</em> the first name and the last name. We want the developer that will call the function to always pass the two arguments.
+Here's one way to do it:</p>
+<pre><code class="language-js">const isRequired = () => {
+  throw new Error(`param is required`);
+};
+
++const constructFullName = (firstName = isRequired(), lastName = isRequired()) => {
++  return `${firstName} ${lastName}`;
+};
+constructFullName('Mahmoud'); // Error: param is required
+</code></pre>
+<p>We're setting a function as the default value for the parameters, if we don't override this function by passing an argument, we will get an error.</p>
+<p>This works but what if we want to strictly pass strings to the function? We can do this:</p>
+<pre><code class="language-js">const isRequired = () => {
+  throw new Error(`param is required!`);
+};
+
+const constructFullName = (
+  firstName = isRequired(),
+  lastName = isRequired()
+) => {
+  if (typeof firstName !== 'string' || typeof lastName !== 'string') {
+    throw new Error(`you must pass a string to this function!`);
+  }
+  return `${firstName} ${lastName}`;
+};
+constructFullName('Mahmoud', 'Abdelwahab'); // Mahmoud Abdelwahab
+constructFullName('Mahmoud', someVariable); // Error: you must pass a string to this function
+</code></pre>
+<p>Notice how much work is done for <em>one</em> function, just to prevent us from making these mistakes and leading to unpredictable behavior. This is of course not ideal since this process is slow and tiring.</p>
+<p>JavaScript is a weakly typed language, it doesn't enforce types. A variable can be assigned a string but later can be assigned a number. JavaScript won't complain.</p>
+<pre><code class="language-js">let age = 'Twenty One Years Old';
+
+let age = 21; // no problem
+</code></pre>
+<p>This behavior makes type mismatches the most common type of error: a certain type of value is expected ( String, Number, Boolean, etc. ), but another is received. This can happen due to a misunderstanding of the API, typos, or by making a mistake.</p>
+<p>Finally, an important thing to note is that the errors we're throwing in the code above will be thrown during <em>runtime</em>, they'll only appear <em>after</em> we run our app. This means without proper testing we may ship code that can break our app.</p>
+<p>All of this affects developer productivity but also it makes developers less confident with the code they're shipping. Fortunately, it doesn't have to be this way. TypeScript to the rescue!</p>
+<h3>What is TypeScript?</h3>
+<p>TypeScript is a superset of JavaScript, developed by Microsoft and got released to the public in 2012.</p>
+<p>It's scalable, type-safe JavaScript that catches type errors during compile time.</p>
+<p>We assign types using the following syntax:</p>
+<pre><code class="language-ts">// age has a type of number
+
+// TypeScript also infers types, however adding types makes the code readable and more predictable.
+
+let age: number = 21;
+</code></pre>
+<p>Here's an example where we try to assign the variable <code>age</code> a string, which is the wrong type.</p>
+<p>TypeScript prevents us from doing this and throws an error. We wouldn't be able to compile this code.</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98813184-7715a400-242c-11eb-945a-be30c26f9455.gif" alt="Type Safe JS"></p>
+<p>Let's go back to the <code>constructFullName</code> function we defined above using JavaScript, this time without checking the type of parameters or making sure that we passed them. Here are different inputs to the function and their outputs:</p>
+<pre><code class="language-js">const constructFullName = (firstName, lastName) => {
+  return `${firstName}, ${lastName}`;
+};
+constructFullName('Mahmoud', 'Abdelwahab'); // Mahmoud Abdelwahab
+constructFullName('Mahmoud', 21); // Mahmoud 21
+constructFullName('Mahmoud'); // Mahmoud undefined
+constructFullName(); // undefined undefined
+</code></pre>
+<p>With TypeScript, all we need to do is define the <strong>argument(s) type(s)</strong> and the <strong>return type</strong> of the function.</p>
+<p>In our case we want the <code>constructFullName</code> function to take 2 strings as a parameter and to return a string. Here's the same function but written in TypeScript:</p>
+<pre><code class="language-ts">const constructFullName = (firstName: string, lastName: string): string => {
+  return `${firstName}, ${lastName}`;
+};
+</code></pre>
+<p>If we try the past examples we automatically get an error, <em>before</em> running our code. TypeScript detects errors <em>as we type</em> our code.</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98815425-c6a99f00-242f-11eb-8f44-e583bc6a75b3.gif" alt="TypeScript type checking example"></p>
+<p>Notice how TypeScript auto-completes the function name, displays the function's arguments with their types and the return type of the function.</p>
+<p>Also, if we don't provide <strong>all</strong> the arguments with their <strong>correct types</strong> we automatically get an error.</p>
+<h3>Why Type-Safety is Beneficial To Developers</h3>
+<p>When using a type-safe language like TypeScript you get a ton of benefits:</p>
+<ul>
+<li>Code is self-documenting: No need to add lots of comments, you can understand what a function does from its types</li>
+<li>Code is predictable</li>
+<li>Less unit tests to write</li>
+<li>Awesome Developer Experience in VSCode
+<ul>
+<li>Refactoring is easier</li>
+<li>Auto-import: VSCode automatically adds any missing imports (No more errors due to forgetting to import a file/library)</li>
+<li>Auto-complete</li>
+</ul>
+</li>
+</ul>
+<p>In conclusion, you feel more confident in the code you write and ship.</p>
+<blockquote>
+<p>But isn't this more work?</p>
+</blockquote>
+<p>When a codebase grows and becomes more complex, you want to be able to make changes and add more code with confidence. With TypeScript you start slow but your productivity in the long run drastically increases, with JavaScript it's the opposite. Think of it as an investment that will pay off in the future.</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98849786-6bda6c80-245c-11eb-9259-88b0ca746fe3.gif" alt="TS vs. JS"></p>
+<h2>Type-safety In The Context of Full-stack Web Apps</h2>
+<p>We've already discussed how Type-safety is beneficial to developer productivity and project scalability. It's even more important in the context of full-stack Web Apps.</p>
+<p>To fully understand "end-to-end" type-safety we need to go over how a web app works.</p>
+<p>This is a "traditional" monolithic web app architecture, you have several components interacting with each other through a request/response cycle. While there are other types of architectures this is the most common one and it's the one we'll be focusing on in this article.</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98822179-2ce6ef80-2439-11eb-9325-21badeb12616.png" alt="Web App Architecture"></p>
+<ul>
+<li>Front-end: What the user sees and interacts with. It can be a Web App, a Mobile App, a Desktop App, etc. In the context of Web Apps, you write it using HTML, CSS and JavaScript. Most likely you'll use a front-end framework like (React, Vue, Angular, etc.).</li>
+<li>API: how the front-end interacts with the server. The most popular types of APIs are REST and GraphQL APIs.</li>
+<li>Server: Contains the core business logic of the app. It can be written in any language like JavaScript, Python, Java, Go, Rust, etc.</li>
+<li>How the server interacts with the database. Usually through on ORM/ query builders/ raw Database queries. Here's a <a href="https://www.prisma.io/dataguide/types/relational/comparing-sql-query-builders-and-orms">comparison</a> between each way.</li>
+<li>Database: where data is persisted and stored. Can be relational, document-based, key-value pairs, etc.</li>
+</ul>
+<p>Now as you can see, we have a lot of options when it comes to each component in the stack each option offering some advantages and drawbacks. We'll be taking a look at different stacks and comparing them:</p>
+<h3>Full-stack Apps and REST APIs</h3>
+<p>If you're working with REST APIs and full-stack JavaScript you're not getting any type-safety, this will lead to unpredictable code, unnecessary bugs, and slowdown the development process.</p>
+<blockquote>
+<p>Will using TypeScript help?</p>
+</blockquote>
+<p>Writing the front-end and the backend in TypeScript doesn't make an app type-safe, this is because the API that's connecting them is not typed. The system is as strong as its weakest point, in this case, it's the API.</p>
+<p>Developers working on the front-end will have to <em>assume</em> the type of the returned data when interacting with the API. Since there's room for assumption, type mismatches can occur often and thus slowing down the development process.</p>
+<p>We also have <strong>multiple sources of truth</strong> for our types and they can easily get out of sync.</p>
+<p>Here's a visual summary:</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98855089-2326b180-2464-11eb-910d-285ef71dd626.png" alt="Full stack TS + REST"></p>
+<p>Furthermore, when using a REST API, you encounter the following problems:</p>
+<ol>
+<li>Maintaining documentation for the API: You need to define all of the endpoints, their parameters, and the values they return (including errors). For example, check out <a href="https://developer.github.com/v3/">GitHub's REST API documentation</a></li>
+<li>Overfetching: the endpoint returns more data than you need.</li>
+<li>Under-fetching: the data you need is spread across multiple endpoints and you have to manually stitch them together.</li>
+<li>The returned data is <em>not</em> typed, which affects developer productivity and the code quality (How well it scales and how predictable it is).</li>
+</ol>
+<p>Fortunately, there is a better alternative: <strong>GraphQL</strong>.</p>
+<h3>GraphQL: The New REST</h3>
+<p>If you're not familiar with GraphQL it's a new way to build APIs. Instead of defining multiple endpoints you define a single endpoint and interact with it. It also solves the issues that REST APIs have:</p>
+<ol>
+<li>You only <strong>ask for the data that you need</strong> so no more under-fetching or over-fetching</li>
+<li><strong>Documentation is automatically generated</strong>, so no need to document any changes.</li>
+<li>It's a spec: all GraphQL APIs work the same, so there's <strong>no learning curve</strong>. (REST APIs can be built in different ways)</li>
+</ol>
+<p>What's great about GraphQL is that it has a built-in <a href="https://graphql.org/learn/schema/">type system</a>. So we're one step closer to creating an end-to-end type-safe system.</p>
+<p><img src="https://user-images.githubusercontent.com/27310414/98841282-8e668880-2450-11eb-8e3f-01df06dbb4b8.png" alt="REST vs GraphQL">
+<em>GraphQL vs. REST</em></p>
+<h3>Leveraging GraphQL Tooling To Build An End-to-end Type-safe System</h3>
+<p>To achieve end-to-end type-safety status, types must be consistent and in <strong>sync</strong> across the whole stack.
+The goal is to maintain a <strong>single source of truth</strong> for our types. Doing this is a lot of manual work, which leaves room for error. So the best solution is to <em>automate</em> this task.</p>
+<p>There are multiple stacks that can achieve end-to-end type-safety, I'll be showing you one way to do it.</p>
+<ol>
+<li>We use an ORM to get the types of our database (<a href="https://prisma.io">Prisma</a>)</li>
+<li>Use a code-first approach to define our schema and resolvers using <a href="https://https://nexusjs.org/">Nexus</a>. A Schema-first approach can also work, however, it leaves room for error. Here's a <a href="https://www.prisma.io/writing/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3">comparison between code-first and schema-first development</a></li>
+<li>Generate types from the schema to use on the front-end using <a href="https://graphql-code-generator.com/">GraphQL code generator</a></li>
+</ol>
+<p>This is a <strong>unidirectional flow</strong> that starts from the backend and our types propagate to the frontend. It also maintains a single source of truth (the GraphQL schema) and allows us to have a clear 3 step process in case we want to do any migrations/updates.</p>
+<ol>
+<li>Update the database schema and types.</li>
+<li>Update the types and fields in the schema generation step.</li>
+<li>Update the fields on the front-end.</li>
+</ol>
+<p><img src="https://user-images.githubusercontent.com/27310414/98915084-1b9df180-24d2-11eb-9199-027a9312cbe5.png" alt="Full Stack TypeScript + GraphQL API"></p>
+<p>If you're interested in a practical code example, <a href="https://prisma.io">Prisma</a> has an end-to-end type-safe <a href="https://github.com/prisma/prisma-examples/tree/latest/typescript/graphql-nextjs">example</a> which uses the following stack:</p>
+<ul>
+<li>Next.js ( Full Stack Framework) + TypeScript.</li>
+<li>Apollo GraphQL (GraphQL Client + GraphQL server).</li>
+<li>Prisma (database toolkit to interact with the Database).</li>
+<li>SQLite (can easily be replaced with PostgreSQL).</li>
+<li>Nexus (code-first GraphQL Schema + generates types).</li>
+</ul>
+<p>They also have a <a href="https://dev.to/prisma/complete-introduction-to-fullstack-type-safe-graphql-feat-next-js-nexus-prisma-c5">guide</a> which shows how to build this Fullstack, Type-Safe GraphQL example.</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+        <item>
+            <title><![CDATA[How I Failed The 100 Days Of Code Challenge]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/failing-100-days-of-code</link>
+            <guid>https://mahmoudabdelwahab.com/writing/failing-100-days-of-code</guid>
+            <pubDate>Wed, 12 Aug 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Reflections on how I failed the 100 days of code challenge]]></description>
+            <content:encoded><![CDATA[<h2>Consistency Is Hard</h2>
+<p>I heard about the 100 days of code challenge around two years ago when I got into web development. It's a challenge where you're supposed to code at least 1 hour a day for 100 days straight.</p>
+<p>I failed at it. <em>HARD</em>.</p>
+<p>I just couldn't manage to stay consistent.</p>
+<p>Some days I coded, others I didn't.</p>
+<p>Some days I felt inspired and motivated, other days I felt like crap and I couldn't get anything done.</p>
+<p>Some days I was just, well, busy. Life got in the way.</p>
+<p>Coding 1 hour a day for 100 days, sounds easy, but it's not. The consistency aspect is super hard. At least for me.</p>
+<p>So after multiple tries, I've accepted defeat.</p>
+<h2>Going with the flow</h2>
+<p>I decided to go with the flow. Code depending on how I felt.</p>
+<p>So some days I'd code for 5-7 hours, and on these days everything would just magically work ✨</p>
+<p>That code snippet I copied from stack overflow? Runs the first time.</p>
+<p>I Encounter a bug? The answer was the first one on Google.</p>
+<p>On other days though, things were <em>slow.</em> Nothing seemed to work, I felt stuck, and I wasn't focused at all. Sometimes it feels like the only productive thing I've done during the day was running <code>npm install</code>.</p>
+<p>What's also weird was I had no in-between. It was binary.</p>
+<p>Either I'm super productive, or a potato.</p>
+<p>With time though, I managed to accept it.</p>
+<p>Getting used to this cycle made me happier since I didn't feel guilty all the time.</p>
+<p>For all beginner developers out there, I want to let you know that It's okay not to be productive every day. It's okay to stumble, struggle, and be stuck. In fact, it's part of the journey.</p>
+<p>If you're productive and in the zone, enjoy it while it lasts.</p>
+<p>If you're stuck, ask for help or take the day off. It's fine. You can always try again tomorrow.</p>
+<p>Now some of you might find a hard time believing what I'm saying. You might be worried that missing a couple of days will greatly impact your progress as a developer.</p>
+<p>I'm here to tell you it won't.</p>
+<h2>What truly matters: doing your best</h2>
+<p>In reality, what matters is the <em>total</em> hours spent.</p>
+<p>Two people can end up coding the same amount even if they follow different schedules.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/6wkpqcgg0wu31o7hzi4h.png" alt="Comparison between two developers, 1 coding for 1 hour daily and one that goes with the flow">
+Here you can see that in the weekly progress chart, the person coding 1 hour a day codes for 7 hours per week, while the other person codes the same amount but for fewer days.</p>
+<p>And for the total number of hours spent coding during the year, the person that went with the flow spent on average the same number of hours as someone that coded 1 hour every day.</p>
+<p>I'm the second type, and luckily, I track how much time I spend on my text editor.</p>
+<p>I use <a href="https://wakatime.com">Wakatime</a>, which is a VSCode extension that tracks the amount of time you spend coding. I installed it on December 24th, 2018. Since then, I've coded for a total of 1218 hours.</p>
+<p>This is what my chart looks like</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/i/ai5rsgttne3aczehttjd.png" alt="WakaTime Chart"></p>
+<p>As you can see, I have times where I coded consistently, others I had <em>zero</em> activity.</p>
+<p>The moral of the story, do what works best for you.
+Don't feel like you have to follow a specific schedule religiously to get better. Just make sure you're always trying to get better. Eventually, you will.</p>
+<p>The funny thing is, 1218 hours in two years is around 1.7 hours per day. So I guess I did complete the challenge after all.</p>
+<h2>Track how much you work, but don't obsess over it</h2>
+<p>Tracking the number of hours is not the best metric, the quality of the time matters too. You should strive to achieve both quality <em>and</em> quantity.</p>
+<p>These numbers also do not show the full picture. They don't include the time I spent reading other people's code (which taught me <em>a lot</em>), watching talks, reading writing posts, and meeting new people.</p>
+<p>However, I think tracking helps in keeping you accountable and it can also act as motivation.</p>
+<p>Do your best, trust the process, and remember: you're only competing with yourself.</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+        <item>
+            <title><![CDATA[Composition Over Inheritance]]></title>
+            <link>https://mahmoudabdelwahab.com/writing/composition-over-inheritance</link>
+            <guid>https://mahmoudabdelwahab.com/writing/composition-over-inheritance</guid>
+            <pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[A comparison between Object-oriented programming and Functional programming]]></description>
+            <content:encoded><![CDATA[<p><em>Object-Oriented Programming (OOP)</em> is one of the most popular paradigms when it comes to building software, however, the more I learned about JavaScript, I got introduced to <em>Functional Programming (FP)</em>, a completely different way of thinking. In this article, I'll share with you what I've learned and I'll explain to you using my own examples.</p>
+<p>Example: You want to build a game, where the main character is a student in Hogwarts and he's learning witchcraft from his teacher.
+So you create a <em>Student</em> Class where your student object will be able to take tests, and you have another class called <em>Teacher</em>, where the teacher object will be able to grade Tests.</p>
+<pre><code class="language-js">Student.takeTest();
+
+Teacher.gradeTest();
+</code></pre>
+<p>Assuming you want to add some features like eating, sleeping and walking, you'll end up with something that looks like this</p>
+<pre><code class="language-js">Student.takeTest().sleep().eat().walk();
+
+Teacher.gradeTest().sleep().eat().walk();
+</code></pre>
+<p>The problem is that the code above doesn't follow the DRY principle, which stands for ( Don't Repeat Yourself), so the solution is to create a <em>parent</em> class where we put the sleep, eat and walk features. So we end up with something like this:</p>
+<pre><code class="language-js">Human.sleep().eat().walk();
+
+Student.takeTest();
+
+Teacher.takeTest();
+</code></pre>
+<p>Yaaay problem solved! everyone's happy. However, a few months later, to make your game even more exciting, you decide to add another character to your game, let's say you want to add a dragon. This is what you end up with:
+SO you end up with something like this:</p>
+<pre><code class="language-js">EvilDragon.breathFire().fly();
+Human.sleep().eat().walk();
+
+Student.takeTest();
+
+Teacher.takeTest();
+</code></pre>
+<p>While this is great, you're not satisfied, so you decide to make the game more realistic by giving your dragon abilities like humans, you want your dragon to be able to sleep and eat, so you end up with something like this:</p>
+<pre><code class="language-js">GameObject.sleep().eat();
+
+EvilDragon.breathFire().fly();
+
+Human.walk();
+
+Student.takeTest();
+
+Teacher.takeTest();
+</code></pre>
+<p>Now, this is working completely fine, but assuming that in your game, the teacher, after careful study of witchcraft, was able to create a cape that allowed him to fly.
+Now comes the problem: <em>how</em> do you structure your project? you can't add the flying ability to the humans class because not all humans can fly, and you can't make the teacher inherit from the EvilDragon Class, because the teacher can't breathe fire.
+There is a solution it's to add features that will never be used by the teacher object to make him able to fly, like breathing fire. However, this is like asking for a banana and receiving a gorilla holding a banana.
+So now, you've hit a wall, you can't turn your game idea into a reality.
+Of course, you can repeat yourself, but since you're an excellent developer who cares about every line of code he writes you won't do that.
+Don't worry though, there is a solution: <strong>Composition</strong></p>
+<p>With inheritance, you structure your classes around "what they are. With functional programming, you structure your classes on what they do.</p>
+<p>By favoring composition over inheritance and thinking in terms of what things <em>do</em> rather than what things <em>are</em>, you free yourself of fragile and tightly coupled inheritance structures.</p>
+<p>Here's a snippet of what our code might look like in our game when we think in terms of objects:</p>
+<pre><code class="language-js">class Teacher {
+  constructor(name) {
+    this.name = name;
+  }
+  sleep() {
+    setTimeout(console.log('Damn, that was a great nap'), 8000);
+  }
+}
+
+const teacher = new Teacher(Dumbledore);
+teacher.sleep();
+//outputs 'Damn, that was a great nap' after 8 seconds
+</code></pre>
+<p>When we write our project using a functional approach we end up with a collection of stand-alone functions, each one of them serving a single purpose, which facilitates maintainability and makes debugging easier since we can predict the outcome of a function. When creating an object, we simply import all the functions that we need.</p>
+<pre><code class="language-js">//same code rewritten using factory functions
+//factory functions are functions that create objects
+//we will use
+const sleep = () => {
+  return setTimeout(console.log('Damn, that was a great nap'), 8000);
+};
+Object.assign();
+</code></pre>
+<p>Which one wins? well normally you would use inheritance when there is a <em>relation</em> between objects, like me, Mahmoud, I'm a human, so I will inherit all of the things that a human has. On the other hand, you would use composition for example when an object <em>has</em> a certain feature, like for example a car will have an engine component.</p>
+<p>However, this is not completely true because, for example, a car is a vehicle and me Mahmoud, I have arms and I can lift things. So, in reality, you can follow any of these patterns.
+Buuuut, composition is easier to debug, maintain, everything is encapsulated and in a project, you can easily add features.</p>]]></content:encoded>
+            <author>hey@mahmoud.codes (Mahmoud Abdelwahab)</author>
+        </item>
+    </channel>
+</rss>
